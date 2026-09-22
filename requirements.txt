@@ -1,0 +1,6 @@
+pandas
+openpyxl
+duckdb
+selenium
+playwright
+pyautogui
