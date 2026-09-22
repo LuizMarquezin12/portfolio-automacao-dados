@@ -31,3 +31,9 @@ A operação ganhou uma visão centralizada dos gaps, permitindo priorizar o que
 
 ## 🛠 Stack
 Power BI · Power Query · Python · pandas · Excel
+
+## 🔗 Papel do BI no ecossistema
+
+O dashboard funciona como a camada de observabilidade do processo. Em vez de avaliar cada robô isoladamente, o cruzamento parte da base faturável e verifica quais registros foram efetivamente atendidos.
+
+Isso conecta **automação operacional + qualidade de dados + gestão por indicadores** e permite direcionar esforço para os gaps restantes.

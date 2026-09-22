@@ -26,9 +26,13 @@ Portfólio técnico com **cases demonstrativos inspirados em desafios reais de o
 ### 1. 🤖 Automação de captura de faturas
 O desafio inicial era executar consultas repetitivas em diferentes portais de distribuidoras, baixar documentos e controlar o que havia sido ou não capturado.
 
-A solução evoluiu para robôs com filas, validações, retentativas, logs, recuperação de falhas e organização de documentos. Com mudanças nos portais e adoção de mecanismos adicionais de autenticação e proteção de sessão, a arquitetura precisou ser revista para separar etapas de autenticação/autorização das rotinas automatizadas posteriores.
+A solução evoluiu de automações de navegação para uma arquitetura mais resiliente, com **filas, validações, retentativas, logs, recuperação de falhas, captura de documentos, controle por competência e retomada de processamento**. Mudanças nos portais e novos mecanismos de autenticação/proteção de sessão exigiram revisão contínua da arquitetura.
 
-**Resultado:** maior velocidade de processamento, redução do trabalho manual e menor dependência de captura terceirizada.
+Também foram desenvolvidas rotinas de **resiliência de conectividade** em ambiente de testes: integração com dispositivo Android via ADB para reinicialização controlada da conexão, espera pela restauração da internet e retomada segura do processamento. A finalidade era tornar execuções longas mais tolerantes a falhas de rede — não contornar CAPTCHA ou controles de acesso.
+
+Quando tecnicamente apropriado e autorizado, o processamento de documentos também passou a aproveitar respostas estruturadas e conteúdo de documentos retornado pelas aplicações, reduzindo etapas desnecessárias de interface.
+
+**Resultado:** maior velocidade de processamento, redução do trabalho manual, melhor recuperação de falhas e menor dependência de captura terceirizada.
 
 ### 2. ⚡ Rateio — validação e geração
 O rateio exigia conferência de UCs, documentos, percentuais, dados cadastrais e regras diferentes por distribuidora.
@@ -49,8 +53,10 @@ Demonstrativos com formatos e identificadores diferentes precisavam ser concilia
 
 A automação normaliza UCs/contratos, cruza as fontes e incorpora os registros encontrados ao acompanhamento operacional.
 
-### 5. 🧹 Qualidade de Dados e Excel
-Diversas rotinas auxiliares foram automatizadas: normalização de colunas, deduplicação, De/Para de UCs, tratamento de CSV/XLSX, validações, geração de arquivos, PDFs, livros, índices e controles operacionais.
+### 5. 🧹 Qualidade de Dados, Excel e documentos
+Diversas rotinas auxiliares foram automatizadas: normalização de colunas, deduplicação, De/Para de UCs, tratamento de CSV/XLSX, validações, geração e organização de PDFs, criação de livros por grupo, índices, controles operacionais e tratamento de grandes volumes de documentos.
+
+Essas rotinas complementam os robôs principais e ajudam a transformar arquivos dispersos em uma operação rastreável e preparada para análise.
 
 ## 📂 Cases
 
