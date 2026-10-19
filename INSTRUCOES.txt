@@ -1,0 +1,10 @@
+ATUALIZAÇÃO DO PORTFÓLIO
+
+1. Baixe o ZIP e extraia os arquivos.
+2. Abra seu repositório GitHub e faça backup do README atual.
+3. Substitua README.md e adicione SECURITY.md, CONTRIBUTING.md, .gitignore e docs/arquitetura.md.
+4. NÃO apague a pasta projetos/ nem outros arquivos existentes.
+5. Confira as alterações no GitHub antes de confirmar o commit.
+6. Esta atualização é apenas documental e não modifica scripts dos projetos.
+
+Importante: o .gitignore não remove arquivos já enviados ao GitHub.
